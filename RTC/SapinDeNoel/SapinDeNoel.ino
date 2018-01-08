@@ -32,7 +32,7 @@ void setup() {
     //    {
     //      Serial.print("[");Serial.print(cc);Serial.print("]=");Serial.println(String(intime[cc]));
     //    }
-    if (intime[2] == ':' & intime[5] == '.')
+    if ((intime[2] == ':') & (intime[5] == '.'))
     {
       String hours = String(intime[0]);
       hours += String(intime[1]);
@@ -46,7 +46,7 @@ void setup() {
       //      Serial.print("h_uint=");Serial.println(hh);
       //      Serial.print("m_str=");Serial.println(minuts);
       //      Serial.print("m_uint=");Serial.println(mm);
-      if (hh >= 0 & hh<24 & mm >= 0 and mm < 60) inok = true;
+      if ((hh >= 0) & (hh<24) & (mm >= 0) & (mm < 60)) inok = true;
       else Serial.println(F("Invalid time entered"));
     }
 
@@ -88,7 +88,7 @@ void alarmMatch()
 void LightON()
 {
   digitalWrite(Relay, LOW);
-  Lstate = OFF;
+  Lstate = ON;
 }
 void LightOFF()
 {
